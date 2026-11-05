@@ -20,8 +20,5 @@
   "homepage": "https://github.com/JoostVDL4/test-backend#readme",
   "devDependencies": {
     "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "mysql2": "^3.24.6"
   }
 }
