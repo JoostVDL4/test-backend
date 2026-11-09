@@ -19,6 +19,9 @@ async function loadFundraisers(): Promise<void> {
 
     const fundraisers: Fundraiser[] = await response.json();
 
+    console.log(fundraisers);
+    
+
     container.replaceChildren();
 
     for (const fundraiser of fundraisers) {

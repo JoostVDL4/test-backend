@@ -9,6 +9,7 @@ async function loadFundraisers() {
             throw new Error("Ophalen mislukt");
         }
         const fundraisers = await response.json();
+        console.log(fundraisers);
         container.replaceChildren();
         for (const fundraiser of fundraisers) {
             const article = document.createElement("article");
