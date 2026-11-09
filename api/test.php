@@ -5,16 +5,17 @@ header("Content-Type: application/json; charset=utf-8");
 $config = require __DIR__ . "/../config.local.php";
 
 try {
-    $database = new PDO(
-        "mysql:host=" . $config["host"]
-        . ";dbname=" . $config["database"]
-        . ";charset=utf8mb4",
-        $config["user"],
-        $config["password"],
-        [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ]
-    );
+   $database = new PDO(
+    "mysql:host=" . $config["host"]
+    . ";port=" . $config["port"]
+    . ";dbname=" . $config["database"]
+    . ";charset=utf8mb4",
+    $config["user"],
+    $config["password"],
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]
+);
 
     $query = $database->query(
         "SELECT id, title, description, goal_amount FROM fundraisers"

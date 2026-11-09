@@ -1,0 +1,15 @@
+USE fundraiser;
+
+CREATE TABLE fundraisers (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    description TEXT NOT NULL,
+    goal_amount DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO fundraisers (title, description, goal_amount)
+VALUES (
+    'Help het dierenasiel',
+    'Geld inzamelen voor voer en verzorging.',
+    2500.00
+);
